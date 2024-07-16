@@ -1,0 +1,20 @@
+agreedToLegal—the value will be true once the user has agreed to the disclaimer.
+
+user—the value will be a JSON object with name/value pairs to store information about the user such as name, 
+health insurance card number, and date of birth.
+
+tbRecords—the value will be an array of JSON objects consisting of the historical values of various test results.
+
+
+
+//requirements
+
+1) password based entry CHECK
+
+2) page get basic info of plant:
+    1: Plant ID
+    2: Date installation
+    3: Change password
+
+3) Implement the page to allow you to chagne the basic information about the plant
+    Implement the page to enter data-power consumed

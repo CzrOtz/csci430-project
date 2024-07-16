@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,6 @@
     <title>Create Account</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="path/to/your/css/file.css">
 </head>
 <body>
     <div class="container d-flex justify-content-center bg-light">
@@ -18,18 +15,21 @@
                 <p>Please take a moment to enter your information</p>
             </div>
             <div class="main-content">
-                <form>
+                <form id="userInfoForm">
                     <p>Enter first name:</p>
                     <input type="text" name="firstName" id="firstName" class="form-control" required>
                     <p>Enter last name:</p>
                     <input type="text" name="lastName" id="lastName" class="form-control" required>
-                    <p>Enter Birth Date: </p>
+                    <p>Enter Birth Date:</p>
                     <input type="date" name="birthDate" id="birthDate" class="form-control" required>
                     <p>Enter email:</p>
                     <input type="email" name="email" id="email" class="form-control" required>
-                    <a href="userMenu.html" class="btn btn-primary mt-2">Submit</a>
+                    <p>Enter a pin to enter into the application, do not forget</p>
+                    <input type="password" name="passcode" id="passcode" class="form-control" required>
+                    <button type="submit" id="submit" class="btn btn-primary mt-2">Submit</button>
                 </form>
-                <a href="userMenu.html" class="btn btn-primary mt-2">Go to Next Page</a>
+                <a id="skip" href="#" class="btn btn-primary mt-2">Skip</a>
+                <button id="delete" class="btn btn-danger mt-2">Delete Local Storage</button>
             </div>
         </div>
     </div>
@@ -38,6 +38,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
+    <script src="../scripts/enterUserInfo.js"></script>
 </body>
 </html>
+
+
+
+
+
+
