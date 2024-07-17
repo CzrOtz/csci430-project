@@ -67,10 +67,10 @@ $(document).ready(function() {
         window.location.href = "disclaimer.html";
     }
 
-    $("#delete").click(function() {
-        localStorage.clear();
-        alert("Local storage cleared");
-    });
+    // $("#delete").click(function() {
+    //     localStorage.clear();
+    //     alert("Local storage cleared");
+    // });
 });
 
 
