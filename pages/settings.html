@@ -6,6 +6,8 @@
     <title>Settings</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/settings.css">
+    <link rel="stylesheet" href="../universalStyle.css">
 </head>
 <body>
     <div class="container-md bg-dark text-white py-5 mb-5">
@@ -16,15 +18,22 @@
             <h1>Settings</h1>
         </div>
         <div class="content d-flex flex-column align-items-center">
-            <p>Change setting</p>
-
-            <form id="settingsForm">
-                <p>Changed Password</p>
-                
-                <input type="password" name="oldPass" id="oldPass" class="form-control" required placeholder="Enter old Password">
-                <input type="password" name="newPass" id="newPass" class="form-control" required placeholder="Enter new Password">
-                <input type="password" name="confirmPass" id="confirmPass" class="form-control" required placeholder="Confirm new Password">
-                <button type="submit" id="submit" class="btn btn-primary mt-2">Change</button>
+            <form id="settingsForm" class="w-50">
+                <div class="form-group">
+                    <label for="oldPass" class="form-label">Enter Old Password</label>
+                    <input type="password" name="oldPass" id="oldPass" class="form-control" required placeholder="Enter old Password">
+                </div>
+                <div class="form-group">
+                    <label for="newPass" class="form-label">Enter New Password</label>
+                    <input type="password" name="newPass" id="newPass" class="form-control" required placeholder="Enter new Password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPass" class="form-label">Confirm New Password</label>
+                    <input type="password" name="confirmPass" id="confirmPass" class="form-control" required placeholder="Confirm new Password">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" id="submit" class="btn btn-primary mt-2">Change</button>
+                </div>
             </form>
         </div>
     </div>
@@ -37,4 +46,5 @@
     <script src="../scripts/settings.js"></script>
 </body>
 </html>
+
 
