@@ -40,7 +40,6 @@ function handleRouting() {
             alert("User information not found, redirecting to user creation page");
             window.location.href = "pages/enterUserInfo.html";
         } else {
-            alert("Redirecting to user menu");
             window.location.href = "pages/userMenu.html";
         }
     }

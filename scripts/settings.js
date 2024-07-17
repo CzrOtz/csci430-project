@@ -62,6 +62,7 @@ $(document).ready(function() {
             if (userSettings.confirmAction()) {
                 userSettings.resetPassword(newPasscode1);
                 alert("Password has been reset");
+                window.location.href = "userMenu.html"
             }
         } else {
             userSettings.error(oldPasscode, newPasscode1, newPasscode2);

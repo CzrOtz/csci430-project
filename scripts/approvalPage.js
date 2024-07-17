@@ -6,8 +6,7 @@ $(document).ready(function() {
         const user = JSON.parse(localStorage.getItem("user"));
 
         if (user && user.passcode === enteredPassword) {
-            // Password matches
-            alert("Password is correct. You may proceed.");
+            
             // Add your logic to proceed, e.g., redirect to another page
             window.location.href = "plantInfo.html";
         } else {
