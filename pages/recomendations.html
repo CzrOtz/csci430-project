@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recomendations</title>
+    <title>Recommendations</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../styles/newpage.css">
+    <link rel="stylesheet" href="../styles/recomendations.css">
     <link rel="stylesheet" href="../universalStyle.css">
 </head>
 <body>
@@ -17,20 +16,24 @@
             <a href="userMenu.html" class="btn btn-primary mb-3">
                 <i class="fas fa-bars"> User Menu</i>
             </a>
-            <h1>Recomendations</h1>
+            <h1>Recommendations</h1>
         </div>
         <div class="content d-flex flex-column align-items-center">
-            <p>Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-                Based on the data collected, we recomend the following:
-            </p> 
+            <p id="historicAverage">
+                <span id="displayHistoricAverage"></span>
+            </p>
+            <p id="sevenDayAverage">
+                <span id="displaySevenDayAverage"></span>
+            </p>
+            <p id="lastValueContainer">
+                <span id="lastValue"></span>
+            </p>
+            <div id="percentageDifferenceContainer" class="d-flex flex-column align-items-center">
+                <p id="percentageLastVsHistoric" class="percentage"></p>
+                <p id="percentageLastVsSevenDay" class="percentage"></p>
+                <p id="percentageHistoricVsSevenDay" class="percentage"></p>
+            </div>
+            
         </div>
     </div>
 
@@ -39,6 +42,10 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-   
+    <script src="../scripts/recomendations.js"></script>
 </body>
 </html>
+
+
+
+

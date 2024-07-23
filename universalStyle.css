@@ -1,4 +1,4 @@
-/* Universal CSS for all pages */
+/* Universal CSS for all pages
 
 /* Container styling */
 .container-md, .container {
@@ -51,5 +51,5 @@ a {
 
 button {
     color: white; /* Ensure all button text is white */
-}
+} 
 
