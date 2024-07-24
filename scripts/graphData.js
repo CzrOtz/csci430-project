@@ -10,7 +10,7 @@ function draw() {
     let powerValues = recentHistory.map(record => parseFloat(record.power.split(" ")[0]));
     let dates = recentHistory.map(record => record.date);
 
-    // Draw the graph using RGraph
+    
     new RGraph.Line({
         id: 'canvasElement',
         data: powerValues,

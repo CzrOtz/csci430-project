@@ -6,8 +6,8 @@
     <title>Recommendations</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../styles/recomendations.css">
+    
+    <link rel="stylesheet" href="../styles/recommendations.css">
     <link rel="stylesheet" href="../universalStyle.css">
 </head>
 <body>
@@ -19,21 +19,18 @@
             <h1>Recommendations</h1>
         </div>
         <div class="content d-flex flex-column align-items-center">
-            <p id="historicAverage">
-                <span id="displayHistoricAverage"></span>
-            </p>
-            <p id="sevenDayAverage">
-                <span id="displaySevenDayAverage"></span>
-            </p>
-            <p id="lastValueContainer">
-                <span id="lastValue"></span>
-            </p>
+            <p id="displayHistoricAverage"></p>
+            <p id="displaySevenDayAverage"></p>
+            <p id="lastValue"></p>
             <div id="percentageDifferenceContainer" class="d-flex flex-column align-items-center">
                 <p id="percentageLastVsHistoric" class="percentage"></p>
                 <p id="percentageLastVsSevenDay" class="percentage"></p>
                 <p id="percentageHistoricVsSevenDay" class="percentage"></p>
             </div>
-            
+            <div class="recommendations text-center">
+                <h3>Our recommendation</h3>
+                <div id="recommendation"></div>
+            </div>
         </div>
     </div>
 
@@ -42,9 +39,10 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../scripts/recomendations.js"></script>
+    <script src="../scripts/recommendations.js"></script>
 </body>
 </html>
+
 
 
 
