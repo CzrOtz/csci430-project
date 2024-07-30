@@ -1,4 +1,5 @@
 // Function to add value to the password input field
+// Function to add value to the password input field
 function addValueToPassword(button) {
     var currVal = $("#passcode").val();
     if (button == "bksp") {
@@ -20,12 +21,24 @@ function getPassword() {
     }
 }
 
-// Function to check if the entered password is correct
-function checkPassword(enteredPassword, storedPassword) {
-    return enteredPassword === storedPassword;
+// Function to retrieve the plant ID
+function getPlantID() {
+    if (typeof(Storage) == "undefined") {
+        alert("Your browser does not support HTML5 localStorage. Try upgrading");
+    } else if (localStorage.getItem("plant") != null) {
+        return JSON.parse(localStorage.getItem("plant")).ID;
+    } else {
+        // Default plant ID
+        return "9876";
+    }
 }
 
-// Function to handle routing based on the password check
+// Function to check if the entered values are correct
+function checkCredentials(enteredPassword, storedPassword, enteredPlantID, storedPlantID) {
+    return enteredPassword === storedPassword && enteredPlantID === storedPlantID;
+}
+
+// Function to handle routing based on the credentials check
 function handleRouting() {
     // Check to see if the user has already agreed to the legal notice
     const agreedToLegal = localStorage.getItem("agreedToLegal");
@@ -45,26 +58,25 @@ function handleRouting() {
     }
 }
 
-// Function to handle the password logic
-function passwordLogic(event) {
+// Function to handle the credentials logic
+function credentialsLogic(event) {
     event.preventDefault(); // Prevent default form submission behavior
     var enteredPassword = document.getElementById("passcode").value;
     var storedPassword = getPassword();
+    var enteredPlantID = document.getElementById("plantID").value;
+    var storedPlantID = getPlantID();
 
-    if (checkPassword(enteredPassword, storedPassword)) {
+    if (checkCredentials(enteredPassword, storedPassword, enteredPlantID, storedPlantID)) {
         handleRouting();
     } else {
-        alert("Incorrect password, please try again");
+        alert("Incorrect credentials, please try again");
     }
 }
 
 // Ensure DOM is fully loaded before binding click event
 $(document).ready(function() {
     // Bind click event to the button with ID "btnEnter"
-    $("#btnEnter").click(passwordLogic);
+    $("#btnEnter").click(credentialsLogic);
 });
-
-
-
 
 

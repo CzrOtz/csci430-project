@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/enterUserInfo.js"></script>
     <link rel="stylesheet" href="universalStyle.css">
 </head>
 <body>
@@ -25,15 +26,17 @@
         <div class="content">
             <!-- Password input -->
             <div class="form-group">
-                <label for="passcode">Login: </label>
+                <label for="plantID">Enter Plant ID</label>
+                <input id="plantID" class="form-control">
+                <label for="passcode">Enter passcode: </label>
                 <input type="password" id="passcode" class="form-control" />
             </div>
 
             <!-- Button groups arranged vertically -->
             <div class="btn-group-vertical w-100 mb-3" id="numKeyPad">
                 <button class="btn btn-primary mb-2" id="btnEnter" type="submit">Enter</button>
-                <button href="pages/about.html" class="btn btn-secondary mb-2">About</button>
-                <button href="pages/disclaimer.html" class="btn btn-secondary mb-2">New Users</button>
+                <a href="pages/about.html" class="btn btn-secondary mb-2">About</a>
+                <a href="pages/disclaimer.html" class="btn btn-secondary mb-2">New Users</a>
             </div>
 
             <!-- Numeric keypad -->
