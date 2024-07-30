@@ -10,11 +10,12 @@ function draw() {
     let powerValues = recentHistory.map(record => parseFloat(record.power.split(" ")[0]));
     let dates = recentHistory.map(record => record.date);
 
-    
     new RGraph.Line({
         id: 'canvasElement',
         data: powerValues,
         options: {
+            backgroundColor: 'white',  // Set background color to white
+            colors: ['red'],           // Set line color to red
             gutterLeft: 60,
             gutterRight: 60,
             gutterTop: 60,
@@ -22,9 +23,8 @@ function draw() {
             backgroundGrid: true,
             backgroundGridAutofitNumhlines: 10,
             backgroundGridAutofitNumvlines: dates.length,
-            colors: ['yellow'],
             hmargin: 1,
-            textSize: 5,
+            textSize: 9,
             textAngle: 90,
             xaxisLabels: dates,
             xaxisTitle: 'Date and Time',
@@ -38,9 +38,11 @@ function draw() {
             shadowBlur: 10,
             shadowOffsetx: 5,
             shadowOffsety: 5,
+            textColor: 'white'
         }
     }).draw();
 }
+
 
 
 
