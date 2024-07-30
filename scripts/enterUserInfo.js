@@ -23,7 +23,7 @@ class User {
         const email = $("#email").val();
         const passcode = $("#passcode").val();
 
-        console.log("Retrieved values:", firstName, lastName, birthDate, email, passcode); // Debugging statement
+        
 
         if (!firstName || !lastName || !birthDate || !email || !passcode) {
             this.deny(event);
@@ -43,10 +43,10 @@ $(document).ready(function() {
     const userInstance = new User();
 
     $("#submit").click(function(event) {
-        // Prevent the default form submission behavior
+        
         event.preventDefault();
 
-        // Retrieve values from the form
+       
         const user = userInstance.retrieveValues(event);
         if (user) {
             userInstance.storeInLocal(user);
@@ -62,7 +62,7 @@ $(document).ready(function() {
         window.location.href = "userMenu.html";
     });
 
-    // Check if the user has agreed to the legal notice
+    
     if (localStorage.getItem("agreedToLegal") === null) {
         window.location.href = "disclaimer.html";
     }

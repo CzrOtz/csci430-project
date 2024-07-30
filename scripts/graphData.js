@@ -14,8 +14,8 @@ function draw() {
         id: 'canvasElement',
         data: powerValues,
         options: {
-            backgroundColor: 'white',  // Set background color to white
-            colors: ['red'],           // Set line color to red
+            backgroundColor: 'white',  
+            colors: ['red'],          
             gutterLeft: 60,
             gutterRight: 60,
             gutterTop: 60,

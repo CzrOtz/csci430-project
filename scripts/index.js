@@ -1,5 +1,4 @@
-// Function to add value to the password input field
-// Function to add value to the password input field
+
 function addValueToPassword(button) {
     var currVal = $("#passcode").val();
     if (button == "bksp") {
@@ -75,7 +74,7 @@ function credentialsLogic(event) {
 
 // Ensure DOM is fully loaded before binding click event
 $(document).ready(function() {
-    // Bind click event to the button with ID "btnEnter"
+    
     $("#btnEnter").click(credentialsLogic);
 });
 

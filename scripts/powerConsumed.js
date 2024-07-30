@@ -7,7 +7,7 @@ class PowerCalculator {
 
     initializeEventListeners() {
         $("#calculate").click(() => this.calculatePower());
-        $("#deleteHistory").click(() => this.deleteHistory()); // Ensure deleteHistory event listener is initialized here
+        $("#deleteHistory").click(() => this.deleteHistory()); 
     }
 
     power() {
@@ -41,8 +41,8 @@ class PowerCalculator {
     }
 
     deleteHistory() {
-        localStorage.removeItem("powerHistory"); // Corrected: Clear powerHistory from localStorage
-        this.updateHistoryDisplay([]); // Update the display after deletion
+        localStorage.removeItem("powerHistory"); 
+        this.updateHistoryDisplay([]); 
     }
 
     loadHistory() {

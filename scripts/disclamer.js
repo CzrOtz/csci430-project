@@ -2,7 +2,7 @@ function reject() {
     alert("To proceed, you must accept the terms of this website. You are now being redirected to the login page.");
 }
 
-// Method to delete specific local storage keys
+
 function clearLocalStorage() {
     localStorage.removeItem("plant");
     localStorage.removeItem("user");
